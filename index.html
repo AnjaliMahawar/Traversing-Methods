@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .c{
+          color: aquamarine;
+       }
+    </style>
+</head>
+<body>
+    <div class="gp">grand parent
+        <div class="p">parent
+            <div class="c">child
+                <div class="gc">grand Child</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var a= document.querySelector('div.gc')
+        console.log(a);
+         a.closest('div.gp').style.border='2px solid red';
+         a.closest('div.p').style.border='2px solid green';
+        //console.log(b)
+        var b= document.querySelector('div.c')
+        console.log(b)
+       var c= b.closest('.p')
+       var d=document.querySelector('div.p')
+       console.log(d)
+      var w= d.closest('.gp')
+      console.log(w)
+    </script>
+</body>
+</html>
