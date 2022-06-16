@@ -6,32 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       .c{
-          color: aquamarine;
-       }
+       
     </style>
 </head>
 <body>
-    <div class="gp">grand parent
-        <div class="p">parent
+    <div class="gp" id="grandP"> grand parent
+        <div class="p " id="parent">parent
             <div class="c">child
-                <div class="gc">grand Child</div>
+                <div class="gc ">grand Child</div>
             </div>
         </div>
     </div>
     <script>
-        var a= document.querySelector('div.gc')
-        console.log(a);
-         a.closest('div.gp').style.border='2px solid red';
-         a.closest('div.p').style.border='2px solid green';
-        //console.log(b)
-        var b= document.querySelector('div.c')
+        //traversing down
+        a=document.getElementById('grandP')
+        console.log(a)
+        a.querySelector('.gc').style.color='red'
+        b=document.getElementById('parent')
         console.log(b)
-       var c= b.closest('.p')
-       var d=document.querySelector('div.p')
-       console.log(d)
-      var w= d.closest('.gp')
-      console.log(w)
+        b.querySelector('.c').style.color='orange'
     </script>
 </body>
 </html>
